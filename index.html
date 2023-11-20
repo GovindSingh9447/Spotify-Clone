@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="sidebar">
+            <div class="nav">
+                <div class="nav-option" style="opacity: 1;">
+                    <a href="#">Home</a>
+                </div>
+                <div class="nav-option">
+                    <a href="#">Search</a>
+                </div>
+            </div>
+            <div class="Library">
+                <div class="options">
+                    <div class="lib-options nav-option">
+                        <img src="./assets/library_icon.png" alt="">
+                        <a href="#">Search</a>
+                    </div>
+                    <div class="icons">
+                    </div>
+                </div>
+                <div class="lib-box">
+                    <p class="box-p1">Create your own playlist</p>
+                    <p class="box-p2">It's easy we'll help you</p>
+                    <button class="badge">Create Playlist</button>
+                </div>
+                <div class="lib-box">
+                    <p class="box-p1">Let's find some podcast to follow</p>
+                    <p class="box-p2">We'll keep you updated on new episodes</p>
+                    <button class="badge">Browse Podcast</button>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="sticky-nav">
+                <div class="sticky-nav-icons">
+                    <img src="assets/backward_icon.png" alt="backward_icon">
+                    <img src="assets/forward_icon.png" class="hide" alt="forward_icon">
+                </div>
+                <div class="sticky-nav-options">
+                    <button class="badge hide">Explore Premium</button>
+                    <i class="fa-regular fa-user"></i>
+                </div>
+            </div> 
+            <div class="cards">
+                <h2>Recently Played</h2>
+                <div class="card-container">
+                    <div class="card" id="card-1">
+                        <img src="./assets/card1img.jpeg" alt="" class="card-img">
+                        <p class="card-title">To 50 - Gloabal</p>
+                        <p class="card-info">Your daily updates of the most played tracks</p>
+                    </div>
+                </div>
+                <h2>Trending now near you</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <img src="./assets/card2img.jpeg" alt="" class="card-img">
+                        <p class="card-title">To 50 - Gloabal</p>
+                        <p class="card-info">Your daily updates of the most played tracks</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/card3img.jpeg" alt="" class="card-img">
+                        <p class="card-title">To 50 - Gloabal</p>
+                        <p class="card-info">Your daily updates of the most played tracks</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/card4img.jpeg" alt="" class="card-img">
+                        <p class="card-title">To 50 - Gloabal</p>
+                        <p class="card-info">Your daily updates of the most played tracks</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/card5img.jpeg" alt="" class="card-img">
+                        <p class="card-title">To 50 - Gloabal</p>
+                        <p class="card-info">Your daily updates of the most played tracks</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/rajnikanth.jpeg" alt="" class="card-img">
+                        <p class="card-title">Hukum</p>
+                        <p class="card-info">Hukum - Jailer </p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/justin-bieber.jpeg" alt="" class="card-img">
+                        <p class="card-title">Justin bieber</p>
+                        <p class="card-info">Justin Bieber Radio </p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/Alan-Walker.jpeg" alt="" class="card-img">
+                        <p class="card-title">Alan Walker</p>
+                        <p class="card-info">Alan Walker Radio </p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/joytime.jpeg" alt="" class="card-img">
+                        <p class="card-title">Marshmello</p>
+                        <p class="card-info">Joytime-Marshmello</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/krsna.jpeg" alt="" class="card-img">
+                        <p class="card-title">Krsna</p>
+                        <p class="card-info">Krsna Playlist</p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/Eminem.jpeg" alt="" class="card-img">
+                        <p class="card-title">Eminem</p>
+                        <p class="card-info">Eminem-Playlist </p>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/Dua-lipa.jpeg" alt="" class="card-img">
+                        <p class="card-title">Dua Lipa</p>
+                        <p class="card-info">Dua Lipa Playlist</p>
+                    </div>
+
+                </div>
+                <h2>Recently Played</h2>
+                <div class="card-container">
+                    <div class="card" id="card-1">
+                        <img src="./assets/card1img.jpeg" alt="" class="card-img">
+                        <p class="card-title">To 50 - Gloabal</p>
+                        <p class="card-info">Your daily updates of the most played tracks</p>
+                    </div>
+                    <div class="card" id="card-1">
+                        <img src="./assets/card2img.jpeg" alt="" class="card-img">
+                        <p class="card-title">To 50 - Gloabal</p>
+                        <p class="card-info">Your daily updates of the most played tracks</p>
+                    </div>
+                    <div class="card" id="card-1">
+                        <img src="./assets/card3img.jpeg" alt="" class="card-img">
+                        <p class="card-title">To 50 - Gloabal</p>
+                        <p class="card-info">Your daily updates of the most played tracks</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <hr>
+            </div>
+        </div>
+        <div class="music-player">
+            <div class="album">
+                <img src="./sidebar Assets/album_picture.jpeg" class="album-img" alt="">
+                <div class="texts">
+                    <p>Daylight</p>
+                    <p>David Kushner</p>
+                </div>
+                <div class="icons">
+                    <img src="./sidebar Assets/album_icon1.png"></img>
+                    <img src="./sidebar Assets/album_icon2.png"></img>
+                </div>
+            </div>
+            <div class="player">
+                <div class="player-controls">
+                    <img src="./assets/player_icon1.png" class="player-control-icon" alt="">
+                    <img src="./assets/player_icon2.png" class="player-control-icon" alt="">
+                    <img src="./assets/player_icon3.png" class="player-control-icon big-icon" alt="">
+                    <img src="./assets/player_icon4.png" class="player-control-icon" alt="">
+                </div>
+                <div class="playback-bar">
+                    <span class="current-time">00:00</span>
+                    <input type="range" min="0" max="100" value="20" class="progress-bar" step="1">
+                    <span class="total-time">03:33</span>
+                </div>
+            </div>
+            <div class="controls">
+                <img src="sidebar Assets/controls_icon1.png" alt="">
+                <img src="sidebar Assets/controld_icon2.png" alt="">
+                <img src="sidebar Assets/controls_icon3.png" alt="">
+                <img src="sidebar Assets/controls_icon4.png" alt="">
+                <img src="sidebar Assets/controls_icon5.png" alt="">
+                <input type="range" start="0" end="100" step="10" start="40" class="progress-bar" style="width: 30%;" >
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
