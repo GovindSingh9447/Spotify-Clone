@@ -15,3 +15,8 @@ https://proatharva.github.io/Spotify-Clone/
 ## Favorite Playlist section Looks like this
 
 <img width="955" alt="image" src="https://github.com/ProAtharva/Spotify-Clone/assets/116292114/ecfa1ecd-3153-44f1-b06b-644e0433bb56">
+
+## Video
+
+https://github.com/ProAtharva/Spotify-Clone/assets/116292114/27a8f311-35b4-4344-a6db-2488a81d5310
+
