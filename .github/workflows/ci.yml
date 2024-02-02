@@ -19,10 +19,10 @@ jobs:
       - name: Build and push Docker image
         run: |
           docker build -t your-image-name .
-          docker tag spotify:latest ${{ steps.ecr-login.outputs.registry }}/${{ secrets.AWS_ACCOUNT_ID }}/spotify:latest
-          docker push ${{ steps.ecr-login.outputs.registry }}/${{ secrets.AWS_ACCOUNT_ID }}/spotify:latest
+          docker tag spotify:latest ${{ steps.ecr-login.outputs.registry }}/994627049189.dkr.ecr.ap-south-1.amazonaws.com/spotify
+          docker push ${{ steps.ecr-login.outputs.registry }}/994627049189.dkr.ecr.ap-south-1.amazonaws.com/spotify
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ap-south-1
-          AWS_ACCOUNT_ID: your-account-id
+          AWS_ACCOUNT_ID: 994627049189
