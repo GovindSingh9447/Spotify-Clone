@@ -1,28 +1,33 @@
-name: CI
-
+---
+name: Build and Push spotify Image to AWS ECR
 on:
   push:
-    branches:
-      - main
-
+    branches: [ main ]
 jobs:
-  build:
+  build-and-push:
+    name: Build and Push to ECR
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v2
 
-      - name: Login to Amazon ECR
-        uses: aws-actions/amazon-ecr-login@v1
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ap-south-1
 
-      - name: Build and push Docker image
-        run: |
-          docker build -t your-image-name .
-          docker tag spotify:latest ${{ steps.ecr-login.outputs.registry }}/994627049189.dkr.ecr.ap-south-1.amazonaws.com/spotify
-          docker push ${{ steps.ecr-login.outputs.registry }}/994627049189.dkr.ecr.ap-south-1.amazonaws.com/spotify
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: ap-south-1
-          AWS_ACCOUNT_ID: 994627049189
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
+
+    - name: Build, Tag, and Push the Image to Amazon ECR
+      id: build-image
+      env:
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        ECR_REPOSITORY: spotify
+        IMAGE_TAG: ${{ steps.increment-git-tag.outputs.git-tag }}
+      run: |
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
