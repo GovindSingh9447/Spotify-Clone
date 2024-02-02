@@ -28,7 +28,7 @@ jobs:
         env:
           ECR_REGISTRY: 994627049189.dkr.ecr.ap-south-1.amazonaws.com
           ECR_REPOSITORY: spotify
-          IMAGE_TAG: ${{ github.ref_slug }}
+          IMAGE_TAG: new
         run: |
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
